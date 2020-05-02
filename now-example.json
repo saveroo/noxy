@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "alias": "noxy.now.sh",
+  "cleanUrls": true,
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    }
+  },
+  "builds": [
+    { "src" :  "*.js", "use": "@now/node" },
+    { "src" :  "/api/proxy/*.ts", "use": "@now/node" },
+    { "src" :  "/api/goxy/*.go", "use": "@now/go" }
+  ],
+  "rewrites": [
+    { "source": "/api/proxy/(.*)", "destination": "/api/proxy?url=$1" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key" : "X-Content-Type-Options",
+          "value" : "nosniff"
+        },
+        {
+          "key" : "X-Frame-Options",
+          "value" : "DENY"
+        },
+        {
+          "key" : "X-XSS-Protection",
+          "value" : "1; mode=block"
+        },
+        {
+          "key": "Server",
+          "value": "(Darwin)"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
