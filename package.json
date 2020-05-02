@@ -1,0 +1,32 @@
+{
+  "name": "nuxtjs",
+  "version": "1.0.0",
+  "description": "My astonishing Nuxt.js project",
+  "author": "msweeneydev",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@zeit/fetch-retry": "^5.0.0",
+    "global": "^4.4.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "now": "^18.0.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@now/go": "^1.0.7",
+    "@now/node": "^1.5.1",
+    "@types/jest": "^25.2.1",
+    "@types/node-fetch": "^2.5.7",
+    "jest": "^25.5.3",
+    "micro-dev": "^3.0.0",
+    "nodemon": "^1.18.9",
+    "typescript": "^3.8.3"
+  }
+}
