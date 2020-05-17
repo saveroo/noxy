@@ -6,5 +6,6 @@ cache:
         - node_modules
 script:
     - yarn run build
-    - now --token="{$NOW_TOKEN}" -c
+    - yarn add now@latest
+    - now --token="$NOW_TOKEN" -c
 
