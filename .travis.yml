@@ -9,7 +9,7 @@ cache:
     directories:
         - node_modules
 script:
-    - rm ./package.json
+    - rm ./package-lock.json
     - yarn run build
     # - yarn add now@latest
     - now --token=$NOW_TOKEN -c
