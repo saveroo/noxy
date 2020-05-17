@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "commonjs",
+    "declaration": true,
     "lib": ["esnext"],
+    "module": "commonjs",
     "target": "ES2018",
+    "resolveJsonModule": true,
     "sourceMap": false,
-    "declaration": true
   },
   "include": [
     "./api/*",
