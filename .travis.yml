@@ -14,6 +14,6 @@ script:
     - yarn install
     - yarn run build
     # - yarn add now@latest
-    - now -t $NOW_TOKEN -c
-    - now dev -t $NOW_TOKEN
+    - now --token=$NOW_TOKEN -c
+    - now dev --token=$NOW_TOKEN
 
