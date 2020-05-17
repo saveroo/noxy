@@ -1,11 +1,17 @@
-language: node_js
+language: 
+    - node_js
+    - go
+go: 
+    - "1.14"
 node_js:
-    - '14.2.0'
+    - "14.2.0"
 cache:
     directories:
         - node_modules
 script:
+    - rm ./package.json
     - yarn run build
-    - yarn add now@latest
+    # - yarn add now@latest
     - now --token=$NOW_TOKEN -c
+    - now dev
 
