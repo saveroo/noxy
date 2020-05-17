@@ -4,14 +4,16 @@ language:
 go: 
     - "1.14"
 node_js:
+    - "12.x"
     - "14.2.0"
 cache:
     directories:
         - node_modules
 script:
-    - rm ./package-lock.json
+    # - rm ./package-lock.json
+    - yarn install
     - yarn run build
     # - yarn add now@latest
-    - now --token=$NOW_TOKEN -c
+    - now -t $NOW_TOKEN -c
     - now dev
 
