@@ -6,4 +6,6 @@ cache:
         - node_modules
 script:
     - yarn run build
-    - now --token=$NOW_TOKEN -c
+    - now -t $NOW_TOKEN -c
+    - now -t NOW_TOKEN -c
+
