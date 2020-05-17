@@ -4,7 +4,6 @@ language:
 go: 
     - "1.14"
 node_js:
-    - 10.x
     - 12.16.3
     - "14.2.0"
 cache:
@@ -16,5 +15,5 @@ script:
     - yarn run build
     # - yarn add now@latest
     - now -t $NOW_TOKEN -c
-    - now dev
+    - now dev -t $NOW_TOKEN
 
