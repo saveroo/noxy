@@ -89,3 +89,6 @@ sw.*
 .DS_Store
 .now
 .vercel
+
+go.mod
+go.sum
