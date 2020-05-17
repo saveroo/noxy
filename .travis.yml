@@ -7,5 +7,5 @@ cache:
 script:
     - yarn run build
     - yarn add now@latest
-    - now --token="$NOW_TOKEN" -c
+    - now --token=$NOW_TOKEN -c
 
